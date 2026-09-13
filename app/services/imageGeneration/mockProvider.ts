@@ -252,28 +252,28 @@ function generateProceduralLifestyleSvg(params: SvgGenParams): string {
   switch (productId) {
     case 'jacket':
       return variation === 0 
-        ? 'https://images.unsplash.com/photo-1520975954732-57dd22299614?auto=format&fit=crop&q=80&w=800' // Guy in leather jacket
+        ? 'https://images.unsplash.com/photo-1553640662-9ab20b8fa2ea?auto=format&fit=crop&q=80&w=800'
         : variation === 1 
-        ? 'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&q=80&w=800' // Woman in leather jacket
-        : 'https://images.unsplash.com/photo-1576871337622-98d48d1cf531?auto=format&fit=crop&q=80&w=800';
+        ? 'https://images.unsplash.com/photo-1485742217969-f1e4cd444fe8?auto=format&fit=crop&q=80&w=800'
+        : 'https://images.unsplash.com/photo-1602700205182-923ff4b8e643?auto=format&fit=crop&q=80&w=800';
     case 'sneakers':
       return variation === 0 
-        ? 'https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&q=80&w=800' // Guy tying sneakers
+        ? 'https://images.unsplash.com/photo-1665168920013-4b5a1ed81b6e?auto=format&fit=crop&q=80&w=800'
         : variation === 1 
-        ? 'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&q=80&w=800' // Vans on feet
-        : 'https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?auto=format&fit=crop&q=80&w=800'; // Person walking in sneakers
+        ? 'https://images.unsplash.com/photo-1636450853539-e13e738b9841?auto=format&fit=crop&q=80&w=800'
+        : 'https://images.unsplash.com/photo-1659401580417-854930bf8b97?auto=format&fit=crop&q=80&w=800';
     case 'handbag':
       return variation === 0 
-        ? 'https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&q=80&w=800' // Woman with purse
+        ? 'https://images.unsplash.com/photo-1547563494-44d4293c053d?auto=format&fit=crop&q=80&w=800'
         : variation === 1 
-        ? 'https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&q=80&w=800' // Woman carrying bag
-        : 'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&q=80&w=800'; // Handbag fashion street
+        ? 'https://images.unsplash.com/photo-1616702931689-4e628d368035?auto=format&fit=crop&q=80&w=800'
+        : 'https://images.unsplash.com/photo-1616729268904-281edc83a670?auto=format&fit=crop&q=80&w=800';
     case 'sunglasses':
     default:
       return variation === 0 
-        ? 'https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&q=80&w=800' // Woman in sunglasses
+        ? 'https://images.unsplash.com/photo-1614468501073-4b5bff384516?auto=format&fit=crop&q=80&w=800'
         : variation === 1 
-        ? 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&q=80&w=800' // Guy in sunglasses
-        : 'https://images.unsplash.com/photo-1508215885820-4585e56135c8?auto=format&fit=crop&q=80&w=800'; // Runway model in sunglasses
+        ? 'https://images.unsplash.com/photo-1583854197400-3cde1621f3b7?auto=format&fit=crop&q=80&w=800'
+        : 'https://images.unsplash.com/photo-1547564151-76c644a30770?auto=format&fit=crop&q=80&w=800';
   }
 }
