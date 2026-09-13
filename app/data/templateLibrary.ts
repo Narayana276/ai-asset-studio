@@ -30,13 +30,13 @@ export const PROMPT_TEMPLATES: PromptTemplateItem[] = [
     promptTemplate:
       'Studio hero commercial shot of {product}, in {style} style, placed against {background}, illuminated by {lighting}, ultra-sharp focus, master composition, 8k uhd, photorealistic texture rendering',
     variables: [
-      { key: 'product', label: 'Product Subject', description: 'The primary product to be generated', defaultValue: 'Minimalist Glass Perfume Bottle' },
+      { key: 'product', label: 'Product Subject', description: 'The primary product to be generated', defaultValue: 'Black Leather Jacket' },
       { key: 'style', label: 'Visual Style', description: 'Stylistic aesthetic grading', defaultValue: 'Ultra-Clean Commercial Studio' },
       { key: 'background', label: 'Background & Surface', description: 'Studio backdrop or pedestal', defaultValue: 'Pure White Seamless Infinity Cyc (#FFFFFF)' },
       { key: 'lighting', label: 'Lighting Model', description: 'Studio lighting setup', defaultValue: 'Softbox Diffused Rim & Key Lighting' },
     ],
     defaultValues: {
-      product: 'Minimalist Glass Perfume Bottle',
+      product: 'Black Leather Jacket',
       style: 'Ultra-Clean Commercial Studio',
       background: 'Pure White Seamless Infinity Cyc (#FFFFFF)',
       lighting: 'Softbox Diffused Rim & Key Lighting',
@@ -54,7 +54,7 @@ export const PROMPT_TEMPLATES: PromptTemplateItem[] = [
     promptTemplate:
       'Editorial lifestyle scene featuring {product} seamlessly integrated into a {environment}, captured in {style} style, illuminated by {lighting}, with a {camera} composition, ultra-realistic textures, natural perspective, {aspectRatio} format, 8k uhd',
     variables: [
-      { key: 'product', label: 'Product Subject', description: 'The lifestyle product item', defaultValue: 'Minimalist Boucle Lounge Chair' },
+      { key: 'product', label: 'Product Subject', description: 'The lifestyle product item', defaultValue: 'Black Leather Jacket' },
       { key: 'environment', label: 'Environment & Space', description: 'Architectural interior or exterior room', defaultValue: 'Sunlit Scandinavian Living Room' },
       { key: 'style', label: 'Lifestyle Style', description: 'Editorial aesthetic mood', defaultValue: 'Architectural Digest Editorial' },
       { key: 'lighting', label: 'Natural Lighting', description: 'Daylight or ambient illumination', defaultValue: 'Golden Hour Window Cast' },

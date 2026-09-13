@@ -16,7 +16,7 @@ export const WORKFLOWS: WorkflowItem[] = [
     badgeBg: 'bg-emerald-500/10 border-emerald-500/30',
     badgeText: 'text-emerald-400',
     aspectRatios: ['1:1 (Square)', '4:5 (Portrait)', '16:9 (Landscape)'],
-    defaultPrompt: 'Studio hero shot of luxury glass perfume bottle on matte marble slab, soft directional rim lighting, caustic reflections, ultra-clean white background, 8k resolution',
+    defaultPrompt: 'Studio hero shot of a black leather jacket on a matte backdrop, soft rim lighting, subtle texture highlights, ultra-clean white background, 8k resolution',
     estimatedTime: '~3-5 seconds',
     outputFormat: 'PNG (Transparent) / JPEG / WebP',
     iconName: 'camera',

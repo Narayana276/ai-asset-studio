@@ -17,9 +17,9 @@ export const VIDEO_PRODUCT_OPTIONS: VideoOptionItem[] = [
     description: 'Anodized aluminum earcups with memory-foam pads and acoustic micro-grills',
   },
   {
-    id: 'perfume-bottle',
-    name: 'Minimalist Glass Perfume Bottle',
-    description: 'Faceted heavy crystal bottle with golden mist atomizing nozzle',
+    id: 'jacket',
+    name: 'Black Leather Jacket',
+    description: 'Premium black leather jacket with sleek tailoring and subtle sheen',
   },
   {
     id: 'drone',

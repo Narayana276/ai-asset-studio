@@ -8,9 +8,9 @@ export interface OptionItem {
 
 export const PRODUCT_OPTIONS: OptionItem[] = [
   {
-    id: 'perfume',
-    name: 'Minimalist Glass Perfume Bottle',
-    description: 'Frosted ribbed glass with gold atomizing cap and amber liquid',
+    id: 'jacket',
+    name: 'Black Leather Jacket',
+    description: 'Premium black leather jacket with sleek tailoring and subtle sheen',
   },
   {
     id: 'watch',
