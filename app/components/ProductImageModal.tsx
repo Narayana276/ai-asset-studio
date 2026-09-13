@@ -1,28 +1,28 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { 
-  X, 
-  Sparkles, 
-  Zap, 
-  RotateCw, 
-  Copy, 
-  Bookmark, 
-  Check, 
-  Camera, 
-  Layers, 
-  Sun, 
-  Palette, 
-  Maximize2, 
-  RefreshCw, 
+import {
+  X,
+  Sparkles,
+  Zap,
+  RotateCw,
+  Copy,
+  Bookmark,
+  Check,
+  Camera,
+  Layers,
+  Sun,
+  Palette,
+  Maximize2,
+  RefreshCw,
   Clock,
   AlertCircle
 } from 'lucide-react';
-import { 
-  PRODUCT_OPTIONS, 
-  STYLE_OPTIONS, 
-  BACKGROUND_OPTIONS, 
-  LIGHTING_OPTIONS, 
+import {
+  PRODUCT_OPTIONS,
+  STYLE_OPTIONS,
+  BACKGROUND_OPTIONS,
+  LIGHTING_OPTIONS,
   ASPECT_RATIO_OPTIONS,
   buildProductPrompt
 } from '../data/productImageConfig';
@@ -52,10 +52,10 @@ export function ProductImageModal({ isOpen, onClose, onSaveAsset }: ProductImage
   return <ProductImageModalContent onClose={onClose} onSaveAsset={onSaveAsset} />;
 }
 
-function ProductImageModalContent({ 
-  onClose, 
-  onSaveAsset 
-}: { 
+function ProductImageModalContent({
+  onClose,
+  onSaveAsset
+}: {
   onClose: () => void;
   onSaveAsset?: (asset: RecentAsset) => void;
 }) {
@@ -180,17 +180,15 @@ function ProductImageModalContent({
   const handleSave = () => {
     if (!generatedResult) return;
     setIsSaved(true);
-
     if (onSaveAsset) {
       onSaveAsset({
         id: generatedResult.id,
         title: `${generatedResult.productName} - ${generatedResult.styleName}`,
         workflowTitle: 'Product Image',
         type: 'image',
-
         dimensions: generatedResult.resolution,
-aspectRatio: generatedResult.aspectRatio,
-timestamp: 'Just now',
+        aspectRatio: generatedResult.aspectRatio,
+        timestamp: 'Just now',
         status: 'Ready',
         gradientBg: 'from-emerald-950/60 to-slate-900',
         tag: `Seed #${generatedResult.seed.toString().slice(0, 5)}`,
@@ -451,16 +449,16 @@ timestamp: 'Just now',
               {/* Variable Chips Preview */}
               <div className="flex flex-wrap gap-1.5 text-[10px] text-slate-400 font-mono">
                 <span className="bg-emerald-950/60 border border-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded">
-                  &#123;product&#125;
+                  {`{product}`}
                 </span>
                 <span className="bg-blue-950/60 border border-blue-500/20 text-blue-300 px-2 py-0.5 rounded">
-                  &#123;style&#125;
+                  {`{style}`}
                 </span>
                 <span className="bg-purple-950/60 border border-purple-500/20 text-purple-300 px-2 py-0.5 rounded">
-                  &#123;background&#125;
+                  {`{background}`}
                 </span>
                 <span className="bg-amber-950/60 border border-amber-500/20 text-amber-300 px-2 py-0.5 rounded">
-                  &#123;lighting&#125;
+                  {`{lighting}`}
                 </span>
               </div>
 
@@ -573,7 +571,7 @@ timestamp: 'Just now',
 
                   <div className="w-48 h-1.5 bg-slate-800 rounded-full overflow-hidden">
                     <div 
-                      className="h-full bg-emerald-500 transition-all duration-500" 
+                      className="h-full bg-emerald-500 transition-all duration-500"
                       style={{ width: generationStep <= 1 ? '33%' : generationStep === 2 ? '66%' : '95%' }}
                     />
                   </div>
@@ -600,7 +598,7 @@ timestamp: 'Just now',
                       )}
 
                       {/* Status Tag */}
-                      <div className="absolute top-3 right-3 flex items-center gap-1 rounded-md border border-emerald-500/40 bg-slate-950/80 px-2 py-0.5 text-[10px] font-medium text-emerald-400 backdrop-blur-md">
+                      <div className="absolute top-3 right-3 flex items-center gap-1 rounded-md border border-emerald-500/40 bg-slate-950/80 px-1.5 py-0.5 text-[10px] font-medium text-emerald-400 backdrop-blur-md">
                         <Check className="h-3 w-3" />
                         <span>{generatedResult.meta.cameraAngle}</span>
                       </div>
@@ -691,7 +689,6 @@ timestamp: 'Just now',
             </div>
 
           </div>
-
         </div>
       </div>
     </div>

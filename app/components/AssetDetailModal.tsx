@@ -25,7 +25,7 @@ export function AssetDetailModal({ asset, onClose }: AssetDetailModalProps) {
   if (!asset) return null;
 
   const isVideo = asset.type === 'video';
-  const assetImageSrc = asset.imageUrl || (asset as any).videoGraphicUrl || '';
+  const assetImageSrc = asset.imageUrl || asset.videoGraphicUrl || '';
 
   const handleCopyPrompt = () => {
     if (asset.prompt) {

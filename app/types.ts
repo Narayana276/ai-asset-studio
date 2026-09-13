@@ -35,5 +35,6 @@ export interface RecentAsset {
   prompt?: string;
   seed?: number;
   aspectRatio?: string;
+  videoGraphicUrl?: string;
   metadata?: Record<string, string | number | boolean | undefined>;
 }
