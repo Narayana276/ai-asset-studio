@@ -734,83 +734,54 @@ function renderLifestyleProductGraphic(productId: string, seed: number, styleId:
   const accent = getAccentColorForStyle(styleId, seed);
 
   switch (productId) {
-    case 'lounge-chair':
+    case 'jacket':
       return `
-        <!-- Minimalist Boucle Lounge Chair in Room -->
-        <g id="boucle-chair">
-          <!-- Walnut Wood Frame Legs -->
-          <line x1="220" y1="360" x2="190" y2="465" stroke="#78350f" stroke-width="8" stroke-linecap="round"/>
-          <line x1="380" y1="360" x2="410" y2="465" stroke="#78350f" stroke-width="8" stroke-linecap="round"/>
-          <line x1="260" y1="370" x2="240" y2="455" stroke="#451a03" stroke-width="7" stroke-linecap="round"/>
-          <line x1="340" y1="370" x2="360" y2="455" stroke="#451a03" stroke-width="7" stroke-linecap="round"/>
-          <!-- Chair Base Ring Support -->
-          <ellipse cx="300" cy="380" rx="100" ry="24" fill="#78350f"/>
-          <!-- Curved Boucle Armrest Backing -->
-          <path d="M190,320 C180,210 420,210 410,320 C400,380 200,380 190,320 Z" fill="#f8fafc" stroke="#e2e8f0" stroke-width="3"/>
-          <!-- Deep Boucle Seat Cushion -->
-          <ellipse cx="300" cy="350" rx="90" ry="35" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2.5"/>
-          <!-- Accent Pillow -->
-          <ellipse cx="320" cy="310" rx="35" ry="25" fill="${accent}" transform="rotate(15 320 310)"/>
+        <!-- Fashion Model wearing Leather Jacket -->
+        <g id="lifestyle-jacket">
+          <!-- Torso/Jacket -->
+          <path d="M220,240 Q300,180 380,240 L390,360 L330,350 L310,480 L290,480 L270,350 L210,360 Z" fill="#0f172a" stroke="#cbd5e1" stroke-width="3"/>
+          <line x1="300" y1="220" x2="300" y2="480" stroke="#cbd5e1" stroke-width="4"/>
+          <!-- Zipper detail -->
+          <rect x="296" y="240" width="8" height="15" rx="2" fill="${accent}"/>
+          <path d="M230,260 Q260,250 270,300" stroke="#334155" stroke-width="3" fill="none"/>
+          <path d="M370,260 Q340,250 330,300" stroke="#334155" stroke-width="3" fill="none"/>
         </g>
       `;
 
-    case 'ceramic-lamp':
+    case 'sneakers':
       return `
-        <!-- Architectural Ceramic Table Lamp on Credenza -->
-        <g id="ceramic-lamp-lifestyle">
-          <!-- Wooden Side Table Surface -->
-          <rect x="180" y="420" width="240" height="24" rx="4" fill="#78350f" stroke="#92400e" stroke-width="2"/>
-          <line x1="210" y1="444" x2="210" y2="475" stroke="#451a03" stroke-width="8"/>
-          <line x1="390" y1="444" x2="390" y2="475" stroke="#451a03" stroke-width="8"/>
-          <!-- Ceramic Base -->
-          <ellipse cx="300" cy="415" rx="50" ry="16" fill="#c2410c"/>
-          <path d="M250,415 Q240,320 285,290 L315,290 Q360,320 350,415 Z" fill="#ea580c" stroke="#9a3412" stroke-width="2.5"/>
-          <!-- Linen Cylindrical Lampshade with Warm Glow -->
-          <rect x="235" y="170" width="130" height="110" rx="6" fill="#fef3c7" stroke="#fde68a" stroke-width="3"/>
-          <!-- Light pool cast from shade -->
-          <ellipse cx="300" cy="425" rx="95" ry="18" fill="#fef08a" opacity="0.55"/>
+        <!-- Fashion Model wearing White Sneakers -->
+        <g id="lifestyle-sneakers">
+          <path d="M210,350 Q230,280 290,290 L340,310 Q390,320 395,380 L380,410 L220,410 Z" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/>
+          <!-- Sole -->
+          <rect x="215" y="410" width="180" height="20" rx="10" fill="#e2e8f0" stroke="#64748b" stroke-width="2"/>
+          <!-- Accents -->
+          <path d="M250,330 L320,310 L340,340 Z" fill="${accent}" opacity="0.8"/>
+          <!-- Heel -->
+          <path d="M210,350 Q205,380 220,410 L230,410 Q225,380 220,350 Z" fill="#334155"/>
+          <!-- Laces -->
+          <line x1="280" y1="295" x2="330" y2="330" stroke="#cbd5e1" stroke-width="4" stroke-dasharray="8,4"/>
         </g>
       `;
 
-    case 'speaker':
+    case 'handbag':
       return `
-        <!-- Portable Aluminum Bluetooth Speaker on Styled Table -->
-        <g id="lifestyle-speaker">
-          <!-- Styled Coffee Table Edge -->
-          <ellipse cx="300" cy="430" rx="140" ry="24" fill="#e2d4be" stroke="#b8a186" stroke-width="3"/>
-          <!-- Art Book under Speaker -->
-          <rect x="220" y="390" width="160" height="26" rx="2" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
-          <rect x="225" y="386" width="150" height="6" fill="#ffffff"/>
-          <!-- Speaker Body -->
-          <rect x="245" y="270" width="110" height="115" rx="22" fill="#334155" stroke="#94a3b8" stroke-width="3"/>
-          <!-- Speaker Grille Acoustic Ring -->
-          <circle cx="300" cy="328" r="32" fill="#0f172a" stroke="${accent}" stroke-width="2"/>
-          <circle cx="300" cy="328" r="14" fill="${accent}"/>
-          <!-- Leather Handle Arch -->
-          <path d="M260,270 C260,210 340,210 340,270" fill="none" stroke="#9a3412" stroke-width="7" stroke-linecap="round"/>
-        </g>
-      `;
-
-    case 'pour-over':
-      return `
-        <!-- Handcrafted Ceramic Pour-Over Set with Coffee Steam -->
-        <g id="lifestyle-pourover">
-          <!-- Kitchen Counter Surface -->
-          <rect x="180" y="430" width="240" height="25" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
-          <!-- Borosilicate Glass Carafe -->
-          <path d="M270,330 L330,330 L350,420 L250,420 Z" fill="#e0f2fe" fill-opacity="0.75" stroke="#38bdf8" stroke-width="2"/>
-          <!-- Dark Brewed Coffee Level -->
-          <path d="M255,380 L345,380 L348,418 L252,418 Z" fill="#451a03"/>
-          <!-- Ceramic Dripper Cone -->
-          <polygon points="260,330 340,330 365,240 235,240" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2.5"/>
-          <rect x="245" y="235" width="110" height="8" rx="4" fill="#64748b"/>
-          <!-- Steam trails -->
-          <path d="M290,225 Q280,180 300,150 T295,120" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.6" stroke-linecap="round"/>
-          <path d="M310,225 Q320,180 305,150 T315,120" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round"/>
+        <!-- Fashion Model holding Luxury Handbag -->
+        <g id="lifestyle-handbag">
+          <!-- Main Body -->
+          <path d="M220,280 L380,280 L395,440 L205,440 Z" fill="#1e293b" stroke="#cbd5e1" stroke-width="3"/>
+          <!-- Flap -->
+          <path d="M220,280 L380,280 L360,350 L240,350 Z" fill="#0f172a"/>
+          <!-- Gold Buckle -->
+          <rect x="280" y="335" width="40" height="30" rx="4" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+          <!-- Handle -->
+          <path d="M250,280 Q300,180 350,280" stroke="#1e293b" stroke-width="12" fill="none"/>
+          <path d="M250,280 Q300,180 350,280" stroke="${accent}" stroke-width="4" fill="none"/>
         </g>
       `;
 
     case 'sunglasses':
+    default:
       return `
         <!-- Designer Acetate Sunglasses on Travertine Tray -->
         <g id="lifestyle-sunglasses">
@@ -830,26 +801,6 @@ function renderLifestyleProductGraphic(productId: string, seed: number, styleId:
             <line x1="12" y1="8" x2="45" y2="32" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
             <line x1="92" y1="8" x2="125" y2="32" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
           </g>
-        </g>
-      `;
-
-    case 'duffle':
-    default:
-      return `
-        <!-- Full-Grain Leather Weekender Duffle in Room -->
-        <g id="lifestyle-duffle">
-          <!-- Duffle Body Cylinder -->
-          <rect x="200" y="320" width="200" height="110" rx="35" fill="#78350f" stroke="#451a03" stroke-width="3.5"/>
-          <!-- End Cap Panel -->
-          <ellipse cx="205" cy="375" rx="16" ry="50" fill="#92400e" stroke="#451a03" stroke-width="2.5"/>
-          <!-- Brass Zipper Track & Pull -->
-          <line x1="220" y1="320" x2="380" y2="320" stroke="#facc15" stroke-width="3"/>
-          <!-- Reinforced Leather Straps -->
-          <path d="M260,320 V425 M340,320 V425" stroke="#451a03" stroke-width="6"/>
-          <!-- Rolled Top Handles Arch -->
-          <path d="M255,320 C250,240 345,240 345,320" fill="none" stroke="#451a03" stroke-width="8" stroke-linecap="round"/>
-          <!-- Hanging Leather Luggage Tag -->
-          <rect x="270" y="335" width="22" height="34" rx="3" fill="#b45309" stroke="#facc15" stroke-width="1.5"/>
         </g>
       `;
   }
