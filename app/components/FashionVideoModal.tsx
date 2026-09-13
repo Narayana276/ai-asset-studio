@@ -698,12 +698,42 @@ function FashionVideoModalContent({
                 ) : generatedVideo ? (
                   // Render Generated Animated Video Graphic
                   <div className="relative w-full h-full flex items-center justify-center overflow-hidden bg-black">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img 
-                      src={generatedVideo.videoGraphicUrl} 
-                      alt={generatedVideo.prompt}
-                      className={`w-full h-full object-cover transition-opacity duration-300 ${isPlaying ? 'opacity-100' : 'opacity-85'}`}
-                    />
+                    <style>{`
+                      @keyframes fashionCrossfade4 {
+                        0% { opacity: 0; }
+                        5% { opacity: 1; }
+                        25% { opacity: 1; }
+                        30% { opacity: 0; }
+                        100% { opacity: 0; }
+                      }
+                      @keyframes fashionPan {
+                        0% { transform: scale(1.02) translate(0, 0); }
+                        100% { transform: scale(1.1) translate(-2%, 1%); }
+                      }
+                    `}</style>
+
+                    {generatedVideo.videoGraphicUrl.split('|').map((src, i, arr) => (
+                      <img 
+                        key={i}
+                        src={src} 
+                        alt={`${generatedVideo.prompt} frame ${i}`}
+                        className={`absolute inset-0 w-full h-full object-cover origin-center ${isPlaying ? '' : 'hidden'}`}
+                        style={isPlaying ? {
+                          opacity: 0,
+                          animation: `fashionCrossfade4 ${arr.length}s linear infinite, fashionPan ${arr.length * 2}s ease-in-out infinite alternate`,
+                          animationDelay: `${i * 1}s, 0s`
+                        } : {}}
+                      />
+                    ))}
+                    
+                    {/* Fallback for paused state */}
+                    {!isPlaying && (
+                      <img 
+                        src={generatedVideo.videoGraphicUrl.split('|')[0]} 
+                        alt={generatedVideo.prompt}
+                        className="absolute inset-0 w-full h-full object-cover opacity-85"
+                      />
+                    )}
 
                     {/* Catwalk 4-Second Reel HUD Overlay */}
                     <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">

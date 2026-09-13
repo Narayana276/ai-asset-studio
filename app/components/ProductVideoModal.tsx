@@ -733,12 +733,42 @@ function ProductVideoModalContent({
                     
                     {/* Animated Video Canvas */}
                     <div className="relative aspect-video w-full overflow-hidden flex items-center justify-center bg-slate-950">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={generatedResult.videoGraphicUrl}
-                        alt={generatedResult.productName}
-                        className={`w-full h-full object-cover transition-transform duration-500 ${isPlaying ? 'scale-100' : 'grayscale-[20%]'}`}
-                      />
+                      <style>{`
+                        @keyframes productCrossfade4 {
+                          0% { opacity: 0; }
+                          5% { opacity: 1; }
+                          25% { opacity: 1; }
+                          30% { opacity: 0; }
+                          100% { opacity: 0; }
+                        }
+                        @keyframes productPan {
+                          0% { transform: scale(1.02) translate(0, 0); }
+                          100% { transform: scale(1.1) translate(2%, -1%); }
+                        }
+                      `}</style>
+                      
+                      {generatedResult.videoGraphicUrl.split('|').map((src, i, arr) => (
+                        <img 
+                          key={i}
+                          src={src} 
+                          alt={`${generatedResult.productName} frame ${i}`}
+                          className={`absolute inset-0 w-full h-full object-cover origin-center ${isPlaying ? '' : 'hidden'}`}
+                          style={isPlaying ? {
+                            opacity: 0,
+                            animation: `productCrossfade4 ${arr.length}s linear infinite, productPan ${arr.length * 2}s ease-in-out infinite alternate`,
+                            animationDelay: `${i * 1}s, 0s`
+                          } : {}}
+                        />
+                      ))}
+                      
+                      {/* Fallback for paused state */}
+                      {!isPlaying && (
+                        <img 
+                          src={generatedResult.videoGraphicUrl.split('|')[0]} 
+                          alt={generatedResult.productName}
+                          className="absolute inset-0 w-full h-full object-cover grayscale-[20%]"
+                        />
+                      )}
 
                       {/* Variation Watermark Badge if active */}
                       {generatedResult.variationIndex > 0 && (

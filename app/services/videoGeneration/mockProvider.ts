@@ -68,67 +68,73 @@ interface SvgVideoParams extends VideoGenerationRequest {
 }
 
 function generateProceduralVideoGraphic(params: SvgVideoParams): string {
-  const { productId, seed, variationIndex } = params;
-  const variation = (seed + variationIndex) % 3;
+  const { productId } = params;
 
   switch (productId) {
     case 'jacket':
-      return variation === 0 
-        ? 'https://images.unsplash.com/photo-1553640662-9ab20b8fa2ea?auto=format&fit=crop&q=80&w=800'
-        : variation === 1 
-        ? 'https://images.unsplash.com/photo-1485742217969-f1e4cd444fe8?auto=format&fit=crop&q=80&w=800'
-        : 'https://images.unsplash.com/photo-1602700205182-923ff4b8e643?auto=format&fit=crop&q=80&w=800';
+      return [
+        'https://images.unsplash.com/photo-1553640662-9ab20b8fa2ea?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1485742217969-f1e4cd444fe8?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1602700205182-923ff4b8e643?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1553640662-9ab20b8fa2ea?auto=format&fit=crop&q=80&w=800'
+      ].join('|');
     case 'sneakers':
-      return variation === 0 
-        ? 'https://images.unsplash.com/photo-1665168920013-4b5a1ed81b6e?auto=format&fit=crop&q=80&w=800'
-        : variation === 1 
-        ? 'https://images.unsplash.com/photo-1636450853539-e13e738b9841?auto=format&fit=crop&q=80&w=800'
-        : 'https://images.unsplash.com/photo-1659401580417-854930bf8b97?auto=format&fit=crop&q=80&w=800';
+      return [
+        'https://images.unsplash.com/photo-1665168920013-4b5a1ed81b6e?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1636450853539-e13e738b9841?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1659401580417-854930bf8b97?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1665168920013-4b5a1ed81b6e?auto=format&fit=crop&q=80&w=800'
+      ].join('|');
     case 'handbag':
-      return variation === 0 
-        ? 'https://images.unsplash.com/photo-1547563494-44d4293c053d?auto=format&fit=crop&q=80&w=800'
-        : variation === 1 
-        ? 'https://images.unsplash.com/photo-1616702931689-4e628d368035?auto=format&fit=crop&q=80&w=800'
-        : 'https://images.unsplash.com/photo-1616729268904-281edc83a670?auto=format&fit=crop&q=80&w=800';
+      return [
+        'https://images.unsplash.com/photo-1547563494-44d4293c053d?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1616702931689-4e628d368035?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1616729268904-281edc83a670?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1547563494-44d4293c053d?auto=format&fit=crop&q=80&w=800'
+      ].join('|');
     case 'sunglasses':
     default:
-      return variation === 0 
-        ? 'https://images.unsplash.com/photo-1614468501073-4b5bff384516?auto=format&fit=crop&q=80&w=800'
-        : variation === 1 
-        ? 'https://images.unsplash.com/photo-1583854197400-3cde1621f3b7?auto=format&fit=crop&q=80&w=800'
-        : 'https://images.unsplash.com/photo-1547564151-76c644a30770?auto=format&fit=crop&q=80&w=800';
+      return [
+        'https://images.unsplash.com/photo-1614468501073-4b5bff384516?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1583854197400-3cde1621f3b7?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1547564151-76c644a30770?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1614468501073-4b5bff384516?auto=format&fit=crop&q=80&w=800'
+      ].join('|');
   }
 }
 
 function generateProceduralFashionVideoGraphic(params: SvgVideoParams): string {
-  const { productId, seed, variationIndex } = params;
-  const variation = (seed + variationIndex) % 3;
+  const { productId } = params;
 
   switch (productId) {
     case 'jacket':
-      return variation === 0 
-        ? 'https://images.unsplash.com/photo-1553640662-9ab20b8fa2ea?auto=format&fit=crop&q=80&w=800'
-        : variation === 1 
-        ? 'https://images.unsplash.com/photo-1485742217969-f1e4cd444fe8?auto=format&fit=crop&q=80&w=800'
-        : 'https://images.unsplash.com/photo-1602700205182-923ff4b8e643?auto=format&fit=crop&q=80&w=800';
+      return [
+        'https://images.unsplash.com/photo-1553640662-9ab20b8fa2ea?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1485742217969-f1e4cd444fe8?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1602700205182-923ff4b8e643?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1553640662-9ab20b8fa2ea?auto=format&fit=crop&q=80&w=800'
+      ].join('|');
     case 'sneakers':
-      return variation === 0 
-        ? 'https://images.unsplash.com/photo-1665168920013-4b5a1ed81b6e?auto=format&fit=crop&q=80&w=800'
-        : variation === 1 
-        ? 'https://images.unsplash.com/photo-1636450853539-e13e738b9841?auto=format&fit=crop&q=80&w=800'
-        : 'https://images.unsplash.com/photo-1659401580417-854930bf8b97?auto=format&fit=crop&q=80&w=800';
+      return [
+        'https://images.unsplash.com/photo-1665168920013-4b5a1ed81b6e?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1636450853539-e13e738b9841?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1659401580417-854930bf8b97?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1665168920013-4b5a1ed81b6e?auto=format&fit=crop&q=80&w=800'
+      ].join('|');
     case 'handbag':
-      return variation === 0 
-        ? 'https://images.unsplash.com/photo-1547563494-44d4293c053d?auto=format&fit=crop&q=80&w=800'
-        : variation === 1 
-        ? 'https://images.unsplash.com/photo-1616702931689-4e628d368035?auto=format&fit=crop&q=80&w=800'
-        : 'https://images.unsplash.com/photo-1616729268904-281edc83a670?auto=format&fit=crop&q=80&w=800';
+      return [
+        'https://images.unsplash.com/photo-1547563494-44d4293c053d?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1616702931689-4e628d368035?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1616729268904-281edc83a670?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1547563494-44d4293c053d?auto=format&fit=crop&q=80&w=800'
+      ].join('|');
     case 'sunglasses':
     default:
-      return variation === 0 
-        ? 'https://images.unsplash.com/photo-1614468501073-4b5bff384516?auto=format&fit=crop&q=80&w=800'
-        : variation === 1 
-        ? 'https://images.unsplash.com/photo-1583854197400-3cde1621f3b7?auto=format&fit=crop&q=80&w=800'
-        : 'https://images.unsplash.com/photo-1547564151-76c644a30770?auto=format&fit=crop&q=80&w=800';
+      return [
+        'https://images.unsplash.com/photo-1614468501073-4b5bff384516?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1583854197400-3cde1621f3b7?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1547564151-76c644a30770?auto=format&fit=crop&q=80&w=800',
+        'https://images.unsplash.com/photo-1614468501073-4b5bff384516?auto=format&fit=crop&q=80&w=800'
+      ].join('|');
   }
 }
