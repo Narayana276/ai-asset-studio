@@ -337,85 +337,48 @@ function renderProductGraphic(productId: string, seed: number, styleId: string):
   const accent = getAccentColorForStyle(styleId, seed);
 
   switch (productId) {
-    case 'perfume':
+    case 'jacket':
       return `
-        <!-- Glass Perfume Bottle -->
-        <g id="perfume-bottle">
-          <!-- Bottle Body -->
-          <rect x="235" y="240" width="130" height="190" rx="16" fill="#1e293b" fill-opacity="0.85" stroke="#e2e8f0" stroke-width="3"/>
-          <!-- Perfume Liquid Meniscus -->
-          <rect x="242" y="275" width="116" height="148" rx="10" fill="#f59e0b" fill-opacity="0.55"/>
-          <!-- Internal Tube -->
-          <line x1="300" y1="230" x2="300" y2="420" stroke="#fef3c7" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
-          <!-- Golden Neck Ring -->
-          <rect x="272" y="215" width="56" height="25" rx="4" fill="#d97706" stroke="#fbbf24" stroke-width="2"/>
-          <!-- Atomizer Cap -->
-          <rect x="265" y="150" width="70" height="65" rx="8" fill="#1e293b" stroke="#cbd5e1" stroke-width="2.5"/>
-          <!-- Glass Reflections & Specular Highlights -->
-          <path d="M246,252 L246,418" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
-          <path d="M256,252 L256,418" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" opacity="0.35"/>
-          <!-- Brand Label Placard -->
-          <rect x="255" y="325" width="90" height="50" rx="4" fill="#0f172a" stroke="${accent}" stroke-width="1.5"/>
-          <text x="300" y="348" text-anchor="middle" fill="#f8fafc" font-size="10" font-weight="bold" font-family="sans-serif">EAU DE PARFUM</text>
-          <text x="300" y="362" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="sans-serif">ATELIER STUDIO</text>
+        <!-- Black Leather Jacket -->
+        <g id="jacket-graphic">
+          <!-- Main Body -->
+          <rect x="220" y="180" width="160" height="260" rx="20" fill="#1e293b"/>
+          <!-- Left Sleeve -->
+          <path d="M220,180 L180,300 L180,460 L260,460" fill="#0f172a"/>
+          <!-- Right Sleeve -->
+          <path d="M380,180 L420,300 L420,460 L340,460" fill="#0f172a"/>
+          <!-- Front Zipper -->
+          <line x1="300" y1="180" x2="300" y2="440" stroke="#e2e8f0" stroke-width="3"/>
         </g>
       `;
 
     case 'watch':
       return `
-        <!-- Luxury Ceramic Watch -->
-        <g id="watch-graphic">
-          <!-- Strap Top & Bottom -->
-          <path d="M255,80 L345,80 L340,210 L260,210 Z" fill="#0f172a" stroke="#334155" stroke-width="2"/>
-          <path d="M260,410 L340,410 L345,540 L255,540 Z" fill="#0f172a" stroke="#334155" stroke-width="2"/>
-          <!-- Ceramic Case -->
-          <circle cx="300" cy="310" r="115" fill="#090d16" stroke="#475569" stroke-width="5"/>
-          <!-- Bezel -->
-          <circle cx="300" cy="310" r="100" fill="#0f172a" stroke="#94a3b8" stroke-width="3"/>
-          <!-- Bezel Markers -->
-          <circle cx="300" cy="216" r="3.5" fill="#38bdf8"/>
-          <circle cx="394" cy="310" r="3.5" fill="#e2e8f0"/>
-          <circle cx="300" cy="404" r="3.5" fill="#e2e8f0"/>
-          <circle cx="206" cy="310" r="3.5" fill="#e2e8f0"/>
-          <!-- Dial Face -->
-          <circle cx="300" cy="310" r="88" fill="#020617"/>
-          <!-- Subdials -->
-          <circle cx="300" cy="272" r="22" fill="#0f172a" stroke="#334155" stroke-width="1.2"/>
-          <circle cx="265" cy="335" r="20" fill="#0f172a" stroke="#334155" stroke-width="1.2"/>
-          <circle cx="335" cy="335" r="20" fill="#0f172a" stroke="#334155" stroke-width="1.2"/>
-          <!-- Hands -->
-          <line x1="300" y1="310" x2="300" y2="245" stroke="#f8fafc" stroke-width="3.5" stroke-linecap="round"/>
-          <line x1="300" y1="310" x2="348" y2="295" stroke="#f8fafc" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="300" y1="310" x2="275" y2="360" stroke="${accent}" stroke-width="1.8" stroke-linecap="round"/>
-          <circle cx="300" cy="310" r="5" fill="${accent}"/>
-          <!-- Crown -->
-          <rect x="415" y="298" width="12" height="24" rx="3" fill="#64748b" stroke="#94a3b8" stroke-width="1.5"/>
+        <!-- Stylish Sunglasses -->
+        <g id="sunglasses-graphic">
+          <!-- Frame -->
+          <rect x="210" y="260" width="180" height="80" rx="20" fill="#1e293b"/>
+          <!-- Left Lens -->
+          <circle cx="260" cy="300" r="30" fill="#0f172a"/>
+          <!-- Right Lens -->
+          <circle cx="340" cy="300" r="30" fill="#0f172a"/>
+          <!-- Bridge -->
+          <rect x="300" y="285" width="20" height="30" fill="#0f172a"/>
         </g>
       `;
 
     case 'headphones':
       return `
-        <!-- Wireless Studio Headphones -->
-        <g id="headphones-graphic">
-          <!-- Headband Arch -->
-          <path d="M190,320 C185,150 415,150 410,320" fill="none" stroke="#1e293b" stroke-width="26" stroke-linecap="round"/>
-          <path d="M205,300 C200,170 400,170 395,300" fill="none" stroke="#475569" stroke-width="10" stroke-linecap="round"/>
-          <!-- Left Ear Cup Assembly -->
-          <g transform="translate(170, 270)">
-            <ellipse cx="20" cy="50" rx="36" ry="60" fill="#0f172a" stroke="#94a3b8" stroke-width="3"/>
-            <ellipse cx="20" cy="50" rx="26" ry="46" fill="#1e293b"/>
-            <!-- Acoustic Grill Ring -->
-            <circle cx="20" cy="50" r="16" fill="none" stroke="${accent}" stroke-width="2"/>
-            <circle cx="20" cy="50" r="6" fill="${accent}"/>
-          </g>
-          <!-- Right Ear Cup Assembly -->
-          <g transform="translate(390, 270)">
-            <ellipse cx="20" cy="50" rx="36" ry="60" fill="#0f172a" stroke="#94a3b8" stroke-width="3"/>
-            <ellipse cx="20" cy="50" rx="26" ry="46" fill="#1e293b"/>
-            <!-- Acoustic Grill Ring -->
-            <circle cx="20" cy="50" r="16" fill="none" stroke="${accent}" stroke-width="2"/>
-            <circle cx="20" cy="50" r="6" fill="${accent}"/>
-          </g>
+        <!-- Stylish Sunglasses -->
+        <g id="sunglasses-graphic">
+          <!-- Frame -->
+          <rect x="210" y="260" width="180" height="80" rx="20" fill="#1e293b"/>
+          <!-- Left Lens -->
+          <circle cx="260" cy="300" r="30" fill="#0f172a"/>
+          <!-- Right Lens -->
+          <circle cx="340" cy="300" r="30" fill="#0f172a"/>
+          <!-- Bridge -->
+          <rect x="300" y="285" width="20" height="30" fill="#0f172a"/>
         </g>
       `;
 
@@ -441,27 +404,16 @@ function renderProductGraphic(productId: string, seed: number, styleId: string):
 
     case 'serum':
       return `
-        <!-- Apothecary Botanical Serum Dropper -->
-        <g id="serum-graphic">
-          <!-- Glass Dropper Bottle Body -->
-          <rect x="250" y="230" width="100" height="195" rx="14" fill="#064e3b" stroke="#10b981" stroke-width="2.5"/>
-          <!-- Amber Liquid Level -->
-          <rect x="258" y="270" width="84" height="145" rx="8" fill="#047857" fill-opacity="0.75"/>
-          <!-- Graduated Pipette Tube -->
-          <rect x="294" y="160" width="12" height="235" rx="3" fill="#ecfdf5" fill-opacity="0.85" stroke="#6ee7b7" stroke-width="1.2"/>
-          <!-- Pipette Measurement Lines -->
-          <line x1="294" y1="280" x2="302" y2="280" stroke="#065f46" stroke-width="1.5"/>
-          <line x1="294" y1="310" x2="302" y2="310" stroke="#065f46" stroke-width="1.5"/>
-          <line x1="294" y1="340" x2="302" y2="340" stroke="#065f46" stroke-width="1.5"/>
-          <!-- Bottle Shoulder & Cap Collar -->
-          <rect x="270" y="205" width="60" height="25" rx="4" fill="#0f172a" stroke="#cbd5e1" stroke-width="2"/>
-          <!-- Rubber Bulb Pipette Squeeze -->
-          <path d="M280,205 C275,145 325,145 320,205 Z" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
-          <!-- Clean Label Placard -->
-          <rect x="264" y="300" width="72" height="70" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
-          <text x="300" y="325" text-anchor="middle" fill="#0f172a" font-size="8" font-weight="bold" font-family="sans-serif">BIO-SERUM</text>
-          <text x="300" y="340" text-anchor="middle" fill="#059669" font-size="7" font-weight="bold" font-family="sans-serif">100% BOTANICAL</text>
-          <text x="300" y="355" text-anchor="middle" fill="#64748b" font-size="6" font-family="sans-serif">30 ML / 1.0 FL OZ</text>
+        <!-- Luxury Leather Handbag -->
+        <g id="handbag-graphic">
+          <!-- Main Body -->
+          <rect x="200" y="180" width="200" height="250" rx="20" fill="#1e293b"/>
+          <!-- Flap -->
+          <path d="M200,180 L400,180 L380,240 L220,240 Z" fill="#0f172a"/>
+          <!-- Handle -->
+          <rect x="260" y="150" width="80" height="30" rx="5" fill="#0f172a"/>
+          <!-- Stitching -->
+          <path d="M210,210 L390,210" stroke="#e2e8f0" stroke-width="2"/>
         </g>
       `;
 
