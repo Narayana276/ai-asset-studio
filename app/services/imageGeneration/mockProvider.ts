@@ -455,45 +455,25 @@ function generateProceduralLifestyleSvg(params: SvgGenParams): string {
   switch (environmentId) {
     case 'scandi-living-room':
       envSvg = `
+        <!-- Fashion Model on Urban Street -->
         <defs>
-          <linearGradient id="scandiWall" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#f8fafc"/>
-            <stop offset="60%" stop-color="#f1f5f9"/>
-            <stop offset="100%" stop-color="#e2e8f0"/>
+          <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#ffe5b4"/>
+            <stop offset="100%" stop-color="#ffcc80"/>
           </linearGradient>
-          <linearGradient id="scandiFloor" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#e2d4be"/>
-            <stop offset="100%" stop-color="#cbb69d"/>
+          <linearGradient id="groundGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#2c3e50"/>
+            <stop offset="100%" stop-color="#34495e"/>
           </linearGradient>
         </defs>
-        <!-- Back Wall -->
-        <rect width="600" height="400" fill="url(#scandiWall)"/>
-        <!-- Oak Wood Floor -->
-        <rect y="400" width="600" height="200" fill="url(#scandiFloor)"/>
-        <line x1="0" y1="440" x2="600" y2="440" stroke="#b8a186" stroke-width="1.5" opacity="0.6"/>
-        <line x1="0" y1="490" x2="600" y2="490" stroke="#b8a186" stroke-width="1.5" opacity="0.6"/>
-        <line x1="0" y1="545" x2="600" y2="545" stroke="#b8a186" stroke-width="1.5" opacity="0.6"/>
-        <!-- Scandinavian Floor-to-Ceiling Architectural Window -->
-        <g transform="translate(30, 40)">
-          <rect width="160" height="340" rx="4" fill="#93c5fd" fill-opacity="0.35" stroke="#64748b" stroke-width="5"/>
-          <line x1="80" y1="0" x2="80" y2="340" stroke="#64748b" stroke-width="3"/>
-          <line x1="0" y1="170" x2="160" y2="170" stroke="#64748b" stroke-width="3"/>
-          <!-- Sheer curtain drape -->
-          <path d="M-10,-5 Q25,160 10,345" stroke="#ffffff" stroke-width="24" stroke-linecap="round" opacity="0.6" fill="none"/>
-        </g>
-        <!-- Minimalist line art frame on wall -->
-        <g transform="translate(420, 70)">
-          <rect width="110" height="140" rx="2" fill="#ffffff" stroke="#1e293b" stroke-width="3"/>
-          <circle cx="55" cy="70" r="30" fill="none" stroke="#64748b" stroke-width="2"/>
-          <path d="M35,90 Q55,40 75,90" stroke="#0f172a" stroke-width="2.5" fill="none"/>
-        </g>
-        <!-- Fiddle-leaf fig plant in corner -->
-        <g transform="translate(490, 310)">
-          <ellipse cx="40" cy="110" rx="24" ry="12" fill="#78716c"/>
-          <path d="M40,110 L40,0" stroke="#15803d" stroke-width="4"/>
-          <ellipse cx="25" cy="40" rx="26" ry="16" fill="#16a34a" transform="rotate(-30 25 40)"/>
-          <ellipse cx="60" cy="20" rx="28" ry="18" fill="#15803d" transform="rotate(25 60 20)"/>
-          <ellipse cx="30" cy="-15" rx="30" ry="19" fill="#166534" transform="rotate(-15 30 -15)"/>
+        <rect width="600" height="400" fill="url(#skyGrad)"/>
+        <rect y="400" width="600" height="200" fill="url(#groundGrad)"/>
+        <!-- Simple Model silhouette wearing jacket -->
+        <g transform="translate(300,350) scale(1.2)" fill="#1e293b">
+          <path d="M0,-80 L-30,-20 L-30,40 L30,40 L30,-20 Z"/> <!-- torso -->
+          <circle cx="0" cy="-90" r="20"/> <!-- head -->
+          <path d="M-30,0 L-50,30 L-45,35 L-30,10 Z"/> <!-- left arm -->
+          <path d="M30,0 L50,30 L45,35 L30,10 Z"/> <!-- right arm -->
         </g>
       `;
       break;

@@ -13,14 +13,9 @@ export const PRODUCT_OPTIONS: OptionItem[] = [
     description: 'Premium black leather jacket with sleek tailoring and subtle sheen',
   },
   {
-    id: 'watch',
-    name: 'Luxury Ceramic Chronometer Watch',
-    description: 'Deep obsidian ceramic bezel with brushed titanium accents',
-  },
-  {
-    id: 'headphones',
-    name: 'Wireless Studio Over-Ear Headphones',
-    description: 'Matte aluminum earcups with plush memory-foam cushions',
+    id: 'sunglasses',
+    name: 'Stylish Sunglasses',
+    description: 'Modern sunglasses with reflective lenses and sleek frames',
   },
   {
     id: 'sneakers',

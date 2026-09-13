@@ -336,125 +336,68 @@ function getAccentForSeed(seed: number): string {
 
 function renderVideoProductGraphic(productId: string, accent: string): string {
   switch (productId) {
-    case 'ceramic-watch':
+    case 'jacket':
       return `
-        <!-- 3D Ceramic Watch -->
+        <!-- Black Leather Jacket -->
         <g transform="translate(-300, -310)">
-          <path d="M255,90 L345,90 L340,210 L260,210 Z" fill="#090d16" stroke="#475569" stroke-width="2"/>
-          <path d="M260,410 L340,410 L345,530 L255,530 Z" fill="#090d16" stroke="#475569" stroke-width="2"/>
-          <circle cx="300" cy="310" r="110" fill="#030712" stroke="#64748b" stroke-width="6"/>
-          <circle cx="300" cy="310" r="95" fill="#090d16" stroke="#38bdf8" stroke-width="2"/>
-          <!-- Subdials -->
-          <circle cx="300" cy="275" r="20" fill="#020617" stroke="#475569" stroke-width="1.2"/>
-          <circle cx="265" cy="335" r="18" fill="#020617" stroke="#475569" stroke-width="1.2"/>
-          <circle cx="335" cy="335" r="18" fill="#020617" stroke="#475569" stroke-width="1.2"/>
-          <!-- Rotating Hands -->
-          <line x1="300" y1="310" x2="300" y2="245" stroke="#f8fafc" stroke-width="4" stroke-linecap="round"/>
-          <line x1="300" y1="310" x2="345" y2="300" stroke="#f8fafc" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="300" cy="310" r="6" fill="${accent}"/>
-          <rect x="410" y="298" width="12" height="24" rx="3" fill="#94a3b8"/>
+          <path d="M220,240 Q300,180 380,240 L390,360 L330,350 L310,480 L290,480 L270,350 L210,360 Z" fill="#0f172a" stroke="#cbd5e1" stroke-width="3"/>
+          <line x1="300" y1="220" x2="300" y2="480" stroke="#cbd5e1" stroke-width="4"/>
+          <!-- Zipper detail -->
+          <rect x="296" y="240" width="8" height="15" rx="2" fill="${accent}"/>
+          <path d="M230,260 Q260,250 270,300" stroke="#334155" stroke-width="3" fill="none"/>
+          <path d="M370,260 Q340,250 330,300" stroke="#334155" stroke-width="3" fill="none"/>
         </g>
       `;
 
-    case 'studio-headphones':
+    case 'sneakers':
       return `
-        <!-- Titanium Studio Headphones -->
+        <!-- White Sneakers -->
         <g transform="translate(-300, -310)">
-          <path d="M190,320 C185,150 415,150 410,320" fill="none" stroke="#1e1b4b" stroke-width="24" stroke-linecap="round"/>
-          <path d="M205,300 C200,170 400,170 395,300" fill="none" stroke="#6366f1" stroke-width="8" stroke-linecap="round"/>
-          <g transform="translate(170, 270)">
-            <ellipse cx="20" cy="50" rx="36" ry="58" fill="#090d16" stroke="#94a3b8" stroke-width="3"/>
-            <circle cx="20" cy="50" r="16" fill="none" stroke="${accent}" stroke-width="2"/>
-            <circle cx="20" cy="50" r="6" fill="${accent}"/>
-          </g>
-          <g transform="translate(390, 270)">
-            <ellipse cx="20" cy="50" rx="36" ry="58" fill="#090d16" stroke="#94a3b8" stroke-width="3"/>
-            <circle cx="20" cy="50" r="16" fill="none" stroke="${accent}" stroke-width="2"/>
-            <circle cx="20" cy="50" r="6" fill="${accent}"/>
-          </g>
+          <path d="M210,350 Q230,280 290,290 L340,310 Q390,320 395,380 L380,410 L220,410 Z" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/>
+          <!-- Sole -->
+          <rect x="215" y="410" width="180" height="20" rx="10" fill="#e2e8f0" stroke="#64748b" stroke-width="2"/>
+          <!-- Accents -->
+          <path d="M250,330 L320,310 L340,340 Z" fill="${accent}" opacity="0.8"/>
+          <!-- Heel -->
+          <path d="M210,350 Q205,380 220,410 L230,410 Q225,380 220,350 Z" fill="#334155"/>
+          <!-- Laces -->
+          <line x1="280" y1="295" x2="330" y2="330" stroke="#cbd5e1" stroke-width="4" stroke-dasharray="8,4"/>
         </g>
       `;
 
-    case 'perfume-bottle':
+    case 'handbag':
       return `
-        <!-- Minimalist Glass Perfume Bottle -->
+        <!-- Luxury Handbag -->
         <g transform="translate(-300, -310)">
-          <rect x="235" y="240" width="130" height="190" rx="16" fill="#0f172a" fill-opacity="0.8" stroke="#cbd5e1" stroke-width="3"/>
-          <rect x="242" y="275" width="116" height="148" rx="10" fill="#f59e0b" fill-opacity="0.6"/>
-          <line x1="300" y1="230" x2="300" y2="420" stroke="#fef3c7" stroke-width="3" stroke-linecap="round"/>
-          <rect x="272" y="215" width="56" height="25" rx="4" fill="#d97706" stroke="#fbbf24" stroke-width="2"/>
-          <rect x="265" y="150" width="70" height="65" rx="8" fill="#1e293b" stroke="#cbd5e1" stroke-width="2.5"/>
-          <rect x="255" y="325" width="90" height="50" rx="4" fill="#020617" stroke="${accent}" stroke-width="1.5"/>
-          <text x="300" y="354" text-anchor="middle" fill="#f8fafc" font-size="9" font-weight="bold" font-family="sans-serif">MOTION EDITION</text>
+          <!-- Main Body -->
+          <path d="M220,280 L380,280 L395,440 L205,440 Z" fill="#1e293b" stroke="#cbd5e1" stroke-width="3"/>
+          <!-- Flap -->
+          <path d="M220,280 L380,280 L360,350 L240,350 Z" fill="#0f172a"/>
+          <!-- Gold Buckle -->
+          <rect x="280" y="335" width="40" height="30" rx="4" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+          <!-- Handle -->
+          <path d="M250,280 Q300,180 350,280" stroke="#1e293b" stroke-width="12" fill="none"/>
+          <path d="M250,280 Q300,180 350,280" stroke="${accent}" stroke-width="4" fill="none"/>
         </g>
       `;
 
-    case 'drone':
-      return `
-        <!-- Carbon-Fiber Aerodynamic Drone -->
-        <g transform="translate(-300, -310)">
-          <!-- Quadcopter Arms -->
-          <line x1="180" y1="190" x2="420" y2="430" stroke="#334155" stroke-width="14" stroke-linecap="round"/>
-          <line x1="180" y1="430" x2="420" y2="190" stroke="#334155" stroke-width="14" stroke-linecap="round"/>
-          <!-- Propeller Blur Discs -->
-          <ellipse cx="180" cy="190" rx="45" ry="15" fill="${accent}" opacity="0.35"/>
-          <ellipse cx="420" cy="190" rx="45" ry="15" fill="${accent}" opacity="0.35"/>
-          <ellipse cx="180" cy="430" rx="45" ry="15" fill="${accent}" opacity="0.35"/>
-          <ellipse cx="420" cy="430" rx="45" ry="15" fill="${accent}" opacity="0.35"/>
-          <!-- Central Fuselage Body -->
-          <ellipse cx="300" cy="310" rx="55" ry="75" fill="#090d16" stroke="#64748b" stroke-width="3"/>
-          <circle cx="300" cy="270" r="16" fill="#020617" stroke="#38bdf8" stroke-width="2"/>
-          <!-- Front Gimbal 4K Optical Sensor -->
-          <ellipse cx="300" cy="240" rx="14" ry="10" fill="#0284c7"/>
-          <circle cx="300" cy="240" r="4" fill="#ffffff"/>
-        </g>
-      `;
-
-    case 'mechanical-keyboard':
-      return `
-        <!-- Sculpted Mechanical Keyboard -->
-        <g transform="translate(-300, -310)">
-          <!-- CNC Aluminum Chassis -->
-          <rect x="180" y="240" width="240" height="140" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="3"/>
-          <!-- Keycap Grid -->
-          <g fill="#0f172a" stroke="${accent}" stroke-width="1.2">
-            <rect x="195" y="255" width="22" height="20" rx="3"/><rect x="222" y="255" width="22" height="20" rx="3"/>
-            <rect x="249" y="255" width="22" height="20" rx="3"/><rect x="276" y="255" width="22" height="20" rx="3"/>
-            <rect x="303" y="255" width="22" height="20" rx="3"/><rect x="330" y="255" width="22" height="20" rx="3"/>
-            <rect x="357" y="255" width="22" height="20" rx="3"/><rect x="384" y="255" width="22" height="20" rx="3"/>
-            
-            <rect x="195" y="280" width="22" height="20" rx="3"/><rect x="222" y="280" width="22" height="20" rx="3"/>
-            <rect x="249" y="280" width="22" height="20" rx="3"/><rect x="276" y="280" width="22" height="20" rx="3"/>
-            <rect x="303" y="280" width="22" height="20" rx="3"/><rect x="330" y="280" width="22" height="20" rx="3"/>
-            <rect x="357" y="280" width="49" height="20" rx="3"/>
-
-            <!-- Spacebar Row -->
-            <rect x="195" y="330" width="30" height="20" rx="3"/>
-            <rect x="230" y="330" width="140" height="20" rx="3" fill="#1e1b4b"/>
-            <rect x="375" y="330" width="31" height="20" rx="3"/>
-          </g>
-        </g>
-      `;
-
-    case 'espresso-machine':
+    case 'sunglasses':
     default:
       return `
-        <!-- Brushed Stainless Espresso Machine -->
+        <!-- Stylish Sunglasses -->
         <g transform="translate(-300, -310)">
-          <!-- Machine Body Housing -->
-          <rect x="215" y="190" width="170" height="240" rx="10" fill="#334155" stroke="#cbd5e1" stroke-width="3"/>
-          <!-- Top Cup Warmer Rail -->
-          <line x1="225" y1="180" x2="375" y2="180" stroke="#94a3b8" stroke-width="4"/>
-          <!-- Pressure Gauge -->
-          <circle cx="300" cy="245" r="22" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
-          <line x1="300" y1="245" x2="310" y2="235" stroke="#f43f5e" stroke-width="2"/>
-          <!-- Portafilter Group Head -->
-          <rect x="260" y="295" width="80" height="20" rx="4" fill="#090d16" stroke="#94a3b8" stroke-width="2"/>
-          <line x1="340" y1="305" x2="390" y2="305" stroke="#78350f" stroke-width="6" stroke-linecap="round"/>
-          <!-- Drip Tray Grate -->
-          <rect x="225" y="390" width="150" height="30" rx="4" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
-          <!-- Steam Wand on Left -->
-          <path d="M245,290 L235,360 L240,370" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <!-- Left Lens -->
+          <rect x="200" y="260" width="90" height="70" rx="20" fill="#020617" stroke="#cbd5e1" stroke-width="4"/>
+          <!-- Right Lens -->
+          <rect x="310" y="260" width="90" height="70" rx="20" fill="#020617" stroke="#cbd5e1" stroke-width="4"/>
+          <!-- Bridge -->
+          <path d="M290,280 Q300,270 310,280" stroke="#cbd5e1" stroke-width="5" fill="none"/>
+          <!-- Highlights -->
+          <path d="M210,275 Q240,265 270,275" stroke="${accent}" stroke-width="4" fill="none" opacity="0.6"/>
+          <path d="M320,275 Q350,265 380,275" stroke="${accent}" stroke-width="4" fill="none" opacity="0.6"/>
+          <!-- Temples -->
+          <line x1="200" y1="280" x2="160" y2="240" stroke="#0f172a" stroke-width="8" stroke-linecap="round"/>
+          <line x1="400" y1="280" x2="440" y2="240" stroke="#0f172a" stroke-width="8" stroke-linecap="round"/>
         </g>
       `;
   }
